@@ -1,0 +1,95 @@
+name: acme_marketing_analytics
+description: Comprehensive ACME marketing analytics covering leads, campaigns, conversions, and website engagement for lead reactivation, ROAS analysis, and multi-touch attribution
+tables:
+  - name: customer_360_view
+    base_table:
+      database: SNOWFLAKE_INTELLIGENCE
+      schema: MARKETING_ANALYSIS
+      table: CUSTOMER_360_VIEW
+    description: Unified customer view combining Google Ads, Salesforce CRM, and website analytics data
+    dimensions:
+      - name: lead_id
+        expr: lead_id
+        data_type: text
+        description: Unique identifier for each lead
+      - name: lead_source
+        expr: lead_source
+        data_type: text
+        description: Source where the lead originated (Organic Search, Paid Search, Social Media, etc.)
+      - name: lead_status
+        expr: lead_status
+        data_type: text
+        description: Current status of the lead (Open, Qualified, Closed-Won, Closed-Lost)
+      - name: reactivation_potential
+        expr: reactivation_potential
+        data_type: text
+        description: Potential for lead reactivation (High Potential, Medium Potential, Low Potential)
+      - name: campaign_name
+        expr: campaign_name
+        data_type: text
+        description: Name of the marketing campaign
+      - name: engagement_level
+        expr: engagement_level
+        data_type: text
+        description: Level of website engagement (High, Medium, Low)
+      - name: has_multi_touch_attribution
+        expr: has_multi_touch_attribution
+        data_type: boolean
+        description: Whether lead has multi-touch attribution data available
+      - name: lead_created_date
+        expr: lead_created_date
+        data_type: date
+        description: Date when the lead was created
+      - name: cancellation_reason
+        expr: cancellation_reason
+        data_type: text
+        description: Reason for cancellation if lead was cancelled
+      - name: traffic_source
+        expr: traffic_source
+        data_type: text
+        description: Website traffic source
+      - name: utm_source
+        expr: utm_source
+        data_type: text
+        description: UTM source parameter
+      - name: utm_medium
+        expr: utm_medium
+        data_type: text
+        description: UTM medium parameter
+      - name: utm_campaign
+        expr: utm_campaign
+        data_type: text
+        description: UTM campaign parameter
+    measures:
+      - name: contract_value
+        expr: contract_value
+        data_type: number
+        description: Value of the contract if closed-won
+      - name: daily_spend
+        expr: daily_spend
+        data_type: number
+        description: Daily advertising spend
+      - name: roas
+        expr: roas
+        data_type: number
+        description: Return on advertising spend
+      - name: pages_viewed
+        expr: pages_viewed
+        data_type: number
+        description: Number of pages viewed on website
+      - name: time_on_site_seconds
+        expr: time_on_site_seconds
+        data_type: number
+        description: Time spent on website in seconds
+      - name: daily_clicks
+        expr: daily_clicks
+        data_type: number
+        description: Daily clicks from advertising
+      - name: daily_impressions
+        expr: daily_impressions
+        data_type: number
+        description: Daily impressions from advertising
+      - name: daily_conversions
+        expr: daily_conversions
+        data_type: number
+        description: Daily conversions from advertising
