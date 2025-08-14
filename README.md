@@ -262,6 +262,21 @@ PUT file:///path/to/acme_semantic_model.yaml @semantic_models AUTO_COMPRESS=FALS
 ```
 
 ### 7. Create Intelligence Agent
+
+#### Option A: Complete Marketing Intelligence Agent (Recommended)
+```sql
+-- Execute the complete setup script:
+-- 11_create_marketing_intelligence_agent.sql
+```
+
+This creates the **ACME Marketing Intelligence Agent** with:
+- 4 tools: Customer data analysis, sentiment analysis, document search, web search
+- AI sentiment analysis using SNOWFLAKE.CORTEX.SENTIMENT()
+- Marketing document search service
+- Email campaign response analysis
+- Industry benchmarking capabilities
+
+#### Option B: Basic Marketing Agent
 ```sql
 USE DATABASE SNOWFLAKE_INTELLIGENCE;
 USE SCHEMA AGENTS;

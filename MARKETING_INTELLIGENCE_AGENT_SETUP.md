@@ -243,13 +243,47 @@ $$;
 ### The Sentiment-Conversion Paradox
 Higher sentiment ≠ Higher conversions. Educational messaging creates positive feelings but promotional messaging drives sales.
 
+## Quick Setup
+
+### Demo Setup Script
+Run the complete setup script to create the entire marketing intelligence agent:
+
+```sql
+-- Execute: 11_create_marketing_intelligence_agent.sql
+```
+
+This script creates:
+- All database tables and sample data
+- AI sentiment analysis views
+- Cortex Search service
+- Complete 4-tool agent configuration
+- Verification queries
+
+### Manual Setup Steps
+1. **Run Setup Script**: Execute `11_create_marketing_intelligence_agent.sql`
+2. **Upload Semantic Model**: 
+   ```sql
+   USE SCHEMA SNOWFLAKE_INTELLIGENCE.CONFIG;
+   PUT file:///path/to/sentiment_semantic_model.yaml @semantic_models AUTO_COMPRESS=FALSE OVERWRITE=TRUE;
+   ```
+3. **Verify Agent**: Check Snowsight → AI & ML → Agents
+
 ## Agent Location
 - **Snowsight UI**: AI & ML → Agents → "ACME Marketing Agent"
 - **Full Path**: `SNOWFLAKE_INTELLIGENCE.AGENTS."ACME Marketing Agent"`
 
-## Files in Snowflake
-- Semantic Models: `@snowflake_intelligence.config.semantic_models/`
+## Files Created
+
+### SQL Scripts
+- `11_create_marketing_intelligence_agent.sql` - Complete setup script
+
+### Snowflake Objects
+- **Tables**: `marketing_documents`, `email_campaigns`, `customer_email_responses`
+- **Views**: `email_sentiment_analysis`, `campaign_sentiment_insights`
+- **Search Service**: `marketing_knowledge_search`
+- **Agent**: `"ACME Marketing Agent"` with 4 tools
+
+### Semantic Models
+- `@snowflake_intelligence.config.semantic_models/`
   - `acme_semantic_model.yaml`
   - `sentiment_semantic_model.yaml`
-- Search Service: `SNOWFLAKE_INTELLIGENCE.MARKETING_ANALYSIS.marketing_knowledge_search`
-- Views: `SNOWFLAKE_INTELLIGENCE.MARKETING_ANALYSIS.*`
