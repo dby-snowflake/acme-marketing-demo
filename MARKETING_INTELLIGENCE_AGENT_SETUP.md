@@ -166,21 +166,71 @@ FROM SPECIFICATION $$
 $$;
 ```
 
-## Sample Questions
+## Sample Questions by Agent Tool
 
-### Marketing Knowledge Search
-- "Find our CA Summer Promo 2025 campaign brief"
-- "What does our competitive analysis say about Tesla and Sunrun?"
-- "Search for our lead reactivation playbook and best practices"
+### 📊 ACMEMarketingAnalyst (Cortex Analyst - Customer Data)
+**Purpose**: Analyzes live customer data, leads, campaigns, conversions, and website engagement
 
-### Sentiment Analysis
-- "Analyze customer sentiment for our recent email campaigns"
-- "Compare sentiment of urgent vs educational messaging approaches"
+**Sample Questions:**
+- "I want to re-activate old leads. Pull a list of high-potential leads from the last year who did not convert and did not have a bad cancellation reason. Prioritize those who were highly engaged on our website."
+- "How is our 'CA_Summer_Promo_2025' campaign performing in terms of Return on Ad Spend?"
+- "What is our overall marketing ROI across all campaigns?"
+- "Show me leads by source and engagement level for targeting"
+- "For customers who converted last quarter, what other marketing touchpoints did they have? Show me the top conversion paths."
+- "Which campaigns drove the most conversions and best ROAS last 30 days?"
+- "Create a reactivation cohort for last 270 days up to 500 leads"
+- "Show me the breakdown of leads by engagement level and conversion status"
+
+### 🤖 EmailSentimentAnalyzer (Cortex Analyst - Sentiment Analysis)
+**Purpose**: Analyzes customer email responses using AI sentiment analysis to understand customer reactions
+
+**Sample Questions:**
+- "Analyze the sentiment of customer responses to our recent email campaigns. Which campaigns are generating positive vs negative reactions?"
+- "What does customer feedback tell us about our Holiday Solar Sale messaging?"
 - "Find customers with negative sentiment responses and identify common concerns"
+- "Which email campaigns have the best sentiment scores and conversion rates?"
+- "Compare sentiment of urgent vs educational messaging approaches"
+- "Show me all customers who responded negatively to promotional emails and their specific concerns"
+- "What's the correlation between customer sentiment and actual conversions?"
+- "Which email subject lines generate the most positive customer sentiment?"
 
-### Combined Intelligence
-- "Find our lead reactivation playbook and analyze sentiment of reactivation campaign responses"
-- "Compare our campaign brief projections with actual customer sentiment data"
+### 🔍 MarketingKnowledgeSearch (Cortex Search - Document Search)
+**Purpose**: Searches marketing documents, campaign briefs, strategies, playbooks, and competitive intelligence
+
+**Sample Questions:**
+- "Find our lead reactivation playbook and best practices"
+- "What does our competitive analysis say about Tesla and Sunrun?"
+- "Search for our CA Summer Promo 2025 campaign brief and show me the target audience details"
+- "What does our Holiday Solar Sale strategy document say about messaging approach?"
+- "Find our battery storage market analysis and competitive landscape information"
+- "Search for competitive intelligence on Tesla Powerwall pricing strategy"
+- "What competitive advantages do we have according to our analysis documents?"
+- "Find our lead scoring methodology and criteria"
+- "Search for our ROI calculator methodology and how it works"
+
+### 🌐 Market_Research (Web Search - Industry Benchmarks)
+**Purpose**: Searches the web for industry benchmarks, competitive analysis, and current market trends including CAC data
+
+**Sample Questions:**
+- "What are current industry average CAC rates for solar/renewable energy companies?"
+- "How does our customer acquisition cost compare to industry benchmarks?"
+- "Find current solar industry sentiment analysis best practices"
+- "What are competitors spending on customer acquisition in renewable energy?"
+- "Search for current solar market trends and growth projections for 2025"
+- "Find industry benchmarks for email marketing performance in the solar industry"
+- "What are current best practices for lead reactivation in B2B solar sales?"
+
+## Combined Multi-Tool Intelligence Questions
+
+### Strategy + Data + Sentiment Analysis
+- "Find our lead reactivation playbook, analyze sentiment of recent reactivation campaign responses, and identify high-potential leads for a new campaign"
+- "Use our competitive analysis to understand why customers mention Tesla in negative responses, then find leads interested in battery storage"
+- "Compare our CA Summer Promo campaign brief projections with actual customer sentiment data and ROAS performance"
+
+### Performance Optimization
+- "Search for our Holiday Solar Sale strategy, compare with customer sentiment results, and benchmark against industry CAC rates"
+- "Find our email marketing best practices, analyze how well we're following them based on sentiment, and get current industry benchmarks"
+- "Analyze our battery storage market research, correlate with customer interest levels, and compare with competitor positioning"
 
 ## Key Results
 
